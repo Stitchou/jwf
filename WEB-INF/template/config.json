@@ -1,0 +1,12 @@
+{
+ "a" : true,
+ "b"   : {
+  "c" : true,
+  "__CURRENT__" : true,
+  "d" : {
+   "e" : true
+  }
+ },
+ "f" : true,
+ "g" : { "h" : { } }
+}
