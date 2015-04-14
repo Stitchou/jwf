@@ -55,8 +55,9 @@ public class DBUser {
  
 	public static DBUser getInstance()
 	{	
-		if(INSTANCE == null)
+		if(INSTANCE == null){
 			INSTANCE = new DBUser();
+		}
 		
 		return INSTANCE;
 	}
@@ -64,9 +65,10 @@ public class DBUser {
 	public boolean addUsers(String login,String password){
 		
 		for(User tmp : listUser){
-			if(tmp.getLogin().equals(login))	
+			if(tmp.getLogin().equals(login)){	
 				return false;
 			}
+		}
 		listUser.add(new User(login,password,new String[]{"user"}));
 		return true;
 	}
@@ -77,8 +79,9 @@ public class DBUser {
 		while (iter.hasNext()) {
 		    User str = iter.next();
 
-		    if (str.getLogin().equals(login) && str.getPassword().equals(password))
+		    if (str.getLogin().equals(login) && str.getPassword().equals(password)){
 		        iter.remove();
+		    }
 		}
 	}
 	
@@ -86,11 +89,12 @@ public class DBUser {
 		isUser = false;
 		isResearched = true;
 		for(User tmp : listUser){
-			if(tmp.getLogin().equals(login))
+			if(tmp.getLogin().equals(login)){
 				isUser = true;
 				alkaida = tmp;
 				return;
 			}
+		}
 		
 	}
 }

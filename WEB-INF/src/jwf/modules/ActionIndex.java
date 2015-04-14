@@ -63,40 +63,39 @@ public class ActionIndex implements IAction{
 				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/user/delete\">Supprimer</A>");				
 				context._getResponse().getOutputStream().println("</body>");
 				context._getResponse().getOutputStream().println("</html>");
-			}	
-			else
-				JwfErrorHandler.displayError(context._getResponse(), 500,"Login or Password incorrect");	
+			}else{
+				JwfErrorHandler.displayError(context._getResponse(), 500,"Login or Password incorrect");
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
 	}
 	private boolean TestLogin(IContext context){
-		if(context.getParameterKeys().length >0)
-		{
-			if(context.getParameter("login") != null)
-			{
+		if(context.getParameterKeys().length >0){
+			if(context.getParameter("login") != null){
 				DBUser instance = DBUser.getInstance();
 				String [] arrayLogin = (String[]) context.getParameter("login");
 				String [] arrayPassword =(String[]) context.getParameter("pwd");
 				
-				for(User us : instance.listUser)
-				{
-					for(String s : arrayLogin)
-						if(us.getLogin().equals(s))
-							for(String p : arrayPassword)
+				for(User us : instance.listUser){
+					for(String s : arrayLogin){
+						if(us.getLogin().equals(s)){
+							for(String p : arrayPassword){
 								if(us.getPassword().equals(p)){
 									connecte = new User(s, p, us.getDroits());
 									context.setSessionAttribute("login", connecte.getLogin());
 									context.setSessionAttribute("pwd", connecte.getPassword());
 									return true;
 								}
+							}
+						}
+					}
 				}
 			}
-		}
-		else 
+		}else{ 
 			return true;
-		
+		}
 		return false;
 	}
 

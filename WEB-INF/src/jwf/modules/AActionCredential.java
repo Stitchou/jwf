@@ -39,11 +39,11 @@ public abstract class AActionCredential implements IAction {
 					break;
 				}
 			}
-			if(!found)
+			if(!found){
 				return false;
+			}
 			found = false;
 		}
-		
 		return true;
 	}
 

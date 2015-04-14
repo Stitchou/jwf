@@ -63,9 +63,7 @@ public class ActionUserDelete implements IAction{
 				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/\">Acceuil</A>");				
 				context._getResponse().getOutputStream().println("</body>");
 				context._getResponse().getOutputStream().println("</html>");
-			}						
-			else
-				JwfErrorHandler.displayError(context._getResponse(), 500,"YOU SHALL NOT PASS!!! 404 DELETE FAILED");
+			}
 			
 		} catch (IOException e) {
 			e.printStackTrace();

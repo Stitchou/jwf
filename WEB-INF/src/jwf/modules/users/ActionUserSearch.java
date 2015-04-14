@@ -55,9 +55,9 @@ public class ActionUserSearch implements IAction{
 			if(!log.isEmpty()){
 				//instance.setResearched(true);
 				instance.searchUser(log);
-			}	
-			else
+			}else{
 				instance.setResearched(false);
+			}
 			
 			context._getResponse().setContentType("text/html");
 			context._getResponse().getOutputStream().println("<head>");
@@ -72,18 +72,16 @@ public class ActionUserSearch implements IAction{
 			context._getResponse().getOutputStream().println("</form>");
 			context._getResponse().getOutputStream().println("<br> <br>");
 			context._getResponse().getOutputStream().println("<br> <br>");
-			if(instance.isResearched())
-			{
+			if(instance.isResearched()){
 				if(instance.isUser()){
 					context._getResponse().getOutputStream().println("User :"+instance.getAlkaida().getLogin() + " Pass: "+instance.getAlkaida().getPassword());
 					String [] array = instance.getAlkaida().getDroits();
 					context._getResponse().getOutputStream().println(" Level: ");
 					for(String s : array)
 						context._getResponse().getOutputStream().println(" \""+s+"\"");
-				}
-				else
+				}else{
 					context._getResponse().getOutputStream().println("BOUGNOULE INEXISTANT!!! DEJA PARTI EN MISSION");
-				
+				}
 				instance.setResearched(false);
 			}
 			context._getResponse().getOutputStream().println("<br> <br>");
