@@ -61,7 +61,7 @@ public class ActionUserLogin implements IAction{
 			else if(instance.addUsers(log, pwd))
 				writeResponse(context);
 			else
-				JwfErrorHandler.displayError(context._getResponse(), 500,"Login dÈj‡ prÈsent");
+				JwfErrorHandler.displayError(context._getResponse(), 500,"Login d√©j√† pr√©sent");
             
 	    
 	}

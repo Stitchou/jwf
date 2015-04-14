@@ -54,7 +54,7 @@ public class ActionIndex implements IAction{
 				context._getResponse().getOutputStream().println("<body>");
 				context._getResponse().getOutputStream().println("hello");
 				context._getResponse().getOutputStream().println("<br> <br>");
-				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/user/logout\">Déconnecter</A>");
+				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/user/logout\">DÃ©connecter</A>");
 				context._getResponse().getOutputStream().println("<br> <br>");
 				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/user/search\">Rechercher</A>");
 				context._getResponse().getOutputStream().println("<br> <br>");

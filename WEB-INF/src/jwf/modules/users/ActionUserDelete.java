@@ -46,8 +46,8 @@ public class ActionUserDelete implements IAction{
 		try {
 			String log="",pwd="";
 			
-			log =  context.getSessionAttribute("login");
-			pwd = context.getSessionAttribute("pwd");
+			//log =  context.getSessionAttribute("login");
+			//pwd = context.getSessionAttribute("pwd");
 			
 			if(log != null){
 				System.out.println(log);
@@ -58,7 +58,7 @@ public class ActionUserDelete implements IAction{
 				context._getResponse().getOutputStream().println("<h1>Index!!!</h1>");
 				context._getResponse().getOutputStream().println("</head>");
 				context._getResponse().getOutputStream().println("<body>");
-				context._getResponse().getOutputStream().println("Déconnecté");
+				context._getResponse().getOutputStream().println("DÃ©connectÃ©");
 				context._getResponse().getOutputStream().println("<br> <br>");
 				context._getResponse().getOutputStream().println("<A HREF=\"http://localhost:8080/jwf/\">Acceuil</A>");				
 				context._getResponse().getOutputStream().println("</body>");

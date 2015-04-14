@@ -43,7 +43,7 @@ public class ActionUserCreate implements IAction{
             context._getResponse().setContentType("text/html");
 			context._getResponse().getOutputStream().println("<head>");
 			context._getResponse().getOutputStream().println("<meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\">");
-			context._getResponse().getOutputStream().println("<h1>Création User !!!</h1>");
+			context._getResponse().getOutputStream().println("<h1>CrÃ©ation User !!!</h1>");
 			context._getResponse().getOutputStream().println("</head>");
 			context._getResponse().getOutputStream().println("<body>");
 			context._getResponse().getOutputStream().println("<br> <br>");
